@@ -101,7 +101,6 @@ export const checkoutReducer: ActionReducer<CheckoutState> =
         return state.merge({
           orderState: _orderState
         }) as CheckoutState;
-
       case CheckoutActions.UPDATE_ORDER_SUCCESS:
         _ship_address = payload.ship_address;
         _bill_address = payload.bill_address;

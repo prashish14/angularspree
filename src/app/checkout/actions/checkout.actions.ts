@@ -34,7 +34,6 @@ export class CheckoutActions {
       payload: variant_id
     };
   }
-
   addToCartSuccess(lineItem: LineItem): Action {
     return {
       type: CheckoutActions.ADD_TO_CART_SUCCESS,
@@ -62,33 +61,27 @@ export class CheckoutActions {
       payload: { quantity, lineItemId }
     };
   }
-
   placeOrder(): Action {
     return { type: CheckoutActions.PLACE_ORDER };
   }
-
   changeOrderState(): Action {
     return { type: CheckoutActions.CHANGE_ORDER_STATE };
   }
-
   changeOrderStateSuccess(order: Order): Action {
     return {
       type: CheckoutActions.CHANGE_ORDER_STATE_SUCCESS,
       payload: order
     };
   }
-
   updateOrder(): Action {
     return { type: CheckoutActions.UPDATE_ORDER };
   }
-
   updateOrderSuccess(order: Order): Action {
     return {
       type: CheckoutActions.UPDATE_ORDER_SUCCESS,
       payload: order
     };
   }
-
   orderCompleteSuccess() {
     return { type: CheckoutActions.ORDER_COMPLETE_SUCCESS };
   }

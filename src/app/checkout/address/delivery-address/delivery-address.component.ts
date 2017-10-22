@@ -7,11 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./delivery-address.component.scss']
 })
 export class DeliveryAddressComponent implements OnInit {
-
   @Input() address: Address;
-
   constructor() { }
-
   ngOnInit() {
   }
 

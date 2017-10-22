@@ -31,7 +31,6 @@ export class AddressComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
   }
-
   checkoutToPayment() {
     if (this.orderState === 'delivery' || this.orderState === 'address') {
       this.checkoutService.changeOrderState()
@@ -43,7 +42,6 @@ export class AddressComponent implements OnInit, OnDestroy {
       this.router.navigate(['/checkout', 'payment']);
     }
   }
-
   ngOnDestroy() {
     if (this.orderState === 'delivery') {
       this.checkoutService.changeOrderState()

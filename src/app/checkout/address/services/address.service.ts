@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AddressService {
   constructor(private fb: FormBuilder) {}
-
   initAddressForm() {
     return this.fb.group({
       'firstname': ['', Validators.required],
@@ -18,13 +17,11 @@ export class AddressService {
       'country_id': [232, Validators.required]
     });
   }
-
   initEmailForm() {
     return this.fb.group({
       'email': ['', Validators.required]
     });
   }
-
   createAddresAttributes(address) {
     return {
       'order': {
@@ -33,7 +30,6 @@ export class AddressService {
       }
     };
   }
-
   createGuestAddressAttributes(address, email) {
     return {
       'order': {
